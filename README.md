@@ -40,6 +40,30 @@ Manual:
     copy all of the files into your ~/.vim directory
     ```
 
+## Installation
+
+To install using Pathogen.vim:
+
+    cd ~/.vim/bundle
+    git clone https://github.com/exvim/ex_easyhl
+    
+To install using [Vundle](https://github.com/gmarik/vundle):
+
+    # add this line to your .vimrc file
+    Bundle 'exvim/ex_easyhl'
+
+To install using [NeoBundle](https://github.com/Shougo/neobundle.vim):
+
+    # add this line to your .vimrc file
+    NeoBundle 'exvim/ex_easyhl'
+
+[Download zip file](https://github.com/exvim/ex_easyhl/archive/master.zip):
+
+    cd ~/.vim
+    unzip master.zip
+    copy all of the files into your ~/.vim directory
+
+
 ## Usage
 
 * Highlight words under cursor
