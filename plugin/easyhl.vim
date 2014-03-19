@@ -189,11 +189,11 @@ endfunction
 " }}}1
 
 " syntax highlight {{{1 
-    hi default ex_easyhl_cursorhl gui=none guibg=white term=none cterm=none ctermbg=white 
-    hi default ex_easyhl1 gui=none guibg=lightcyan term=none cterm=none ctermbg=lightcyan
-    hi default ex_easyhl2 gui=none guibg=lightmagenta term=none cterm=none ctermbg=lightmagenta
-    hi default ex_easyhl3 gui=none guibg=lightred term=none cterm=none ctermbg=lightred
-    hi default ex_easyhl4 gui=none guibg=lightgreen term=none cterm=none ctermbg=lightgreen
+hi default ex_easyhl_cursorhl gui=none guibg=white term=none cterm=none ctermbg=white 
+hi default ex_easyhl1 gui=none guibg=lightcyan term=none cterm=none ctermbg=lightcyan
+hi default ex_easyhl2 gui=none guibg=lightmagenta term=none cterm=none ctermbg=lightmagenta
+hi default ex_easyhl3 gui=none guibg=lightred term=none cterm=none ctermbg=lightred
+hi default ex_easyhl4 gui=none guibg=lightgreen term=none cterm=none ctermbg=lightgreen
 " }}}1
 
 " autocmd {{{1
