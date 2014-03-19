@@ -10,7 +10,7 @@ let s:hl_reg_map = ["","q","w","e","r"]
 " functions {{{1
 
 " s:cursor_hl {{{2
-function s:cursor_hl()
+function! s:cursor_hl()
     " check if cursor is stay in a character
     " NOTE: <cword> will get possible cword regardless cursor position.  
     if strpart( getline('.'), col('.')-1, 1 ) !~ '[a-zA-Z]'
@@ -33,7 +33,7 @@ function s:cursor_hl()
 endfunction
 
 " s:rm_cursor_hl {{{2
-function s:rm_cursor_hl ()
+function! s:rm_cursor_hl ()
     if !exists('w:ex_easyhl_cursorhl_match_id')
         let w:ex_easyhl_cursorhl_match_id = 0
     endif
@@ -51,7 +51,7 @@ function s:rm_cursor_hl ()
 endfunction
 
 " s:init_hl_vars {{{2
-function s:init_hl_vars()
+function! s:init_hl_vars()
     if !exists('w:ex_hl_match_ids')
         let w:ex_hl_match_ids = [0,0,0,0,0]
     endif
@@ -61,7 +61,7 @@ function s:init_hl_vars()
 endfunction
 
 " s:reset_hl_vars {{{2
-function s:reset_hl_vars(match_nr) " <<<
+function! s:reset_hl_vars(match_nr) " <<<
     if w:ex_hl_match_ids[a:match_nr] != 0
         silent call matchdelete(w:ex_hl_match_ids[a:match_nr])
         let w:ex_hl_match_ids[a:match_nr] = 0
@@ -71,7 +71,7 @@ function s:reset_hl_vars(match_nr) " <<<
 endfunction
 
 " s:check_match_nr
-function s:check_match_nr(match_nr)
+function! s:check_match_nr(match_nr)
     if a:match_nr != 1 && a:match_nr != 2 && a:match_nr != 3 && a:match_nr != 4 
         echohl ErrorMsg
         echomsg 'Error: Invalid argument ' . a:match_nr
@@ -85,7 +85,7 @@ endfunction
 " Desc: hightlight match_nr
 " NOTE: the 1,2,3,4 correspond to reg q,w,e,r
 
-function s:hl_cword(match_nr) " <<<
+function! s:hl_cword(match_nr) " <<<
     " get word under cursor
     call s:hl_text( a:match_nr, '\<\C'.expand('<cword>').'\>' )
 endfunction " >>>
@@ -94,7 +94,7 @@ endfunction " >>>
 " Desc: hightlight match_nr with text
 " NOTE: the 1,3 will save word to register as \<word\>, the 2,4 will save word to register as word
 
-function s:hl_text(match_nr, args)
+function! s:hl_text(match_nr, args)
     if s:check_match_nr(a:match_nr) == 0
         return
     endif
@@ -133,7 +133,7 @@ endfunction
 " s:hl_range {{{2
 " Desc: hightlight match_nr
 
-function s:hl_range(match_nr) range
+function! s:hl_range(match_nr) range
     if s:check_match_nr(a:match_nr) == 0
         return
     endif
@@ -171,7 +171,7 @@ endfunction
 " s:cancle_hl {{{2
 " Desc: Cancle highlight
 
-function s:hl_cancel(match_nr)
+function! s:hl_cancel(match_nr)
     call s:init_hl_vars() 
     if a:match_nr == 0
         call s:reset_hl_vars(1)
@@ -256,6 +256,9 @@ if !exists("g:easyhl_no_mappings") || !g:easyhl_no_mappings
     nnoremap <unique> <silent> <Leader>2 :EasyhlCancel 2<CR>
     nnoremap <unique> <silent> <Leader>3 :EasyhlCancel 3<CR>
     nnoremap <unique> <silent> <Leader>4 :EasyhlCancel 4<CR>
+
+    nnoremap <unique> <silent><leader>sub :%s/<c-r>q/<c-r>w/g<CR><c-o>
+    vnoremap <unique> <silent><leader>sub  :s/<c-r>q/<c-r>w/g<CR><c-o>
 endif
 " }}}1
 
