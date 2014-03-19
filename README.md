@@ -1,4 +1,4 @@
-# ex_easyhl
+# Intro
 
 Easyhl is a plugin for temporary highlight words under cursor.
 
@@ -6,8 +6,6 @@ Easyhl is a plugin for temporary highlight words under cursor.
 * Easily replace highlight words.  
 
 ## Requirements
-
-The following requirements have to be met in order to be able to use easyhl:
 
 - Vim 6.0 or higher.
 
@@ -34,7 +32,7 @@ To install using [NeoBundle](https://github.com/Shougo/neobundle.vim):
 [Download zip file](https://github.com/exvim/ex_easyhl/archive/master.zip):
 
     cd ~/.vim
-    unzip master.zip
+    unzip ex_easyhl-master.zip
     copy all of the files into your ~/.vim directory
 
 
@@ -42,21 +40,22 @@ To install using [NeoBundle](https://github.com/Shougo/neobundle.vim):
 
 * Highlight words under cursor
 
-Move your cursor to the word you want to highlight. Press `<Alt-1>` or `<Alt-2>` 
-or `<Alt-3>` or `<Alt-4>`
+    Move your cursor to the word you want to highlight. Press `<Alt-1>` or `<Alt-2>` 
+    or `<Alt-3>` or `<Alt-4>`
 
 * Highlith visual selection
 
-By selecting text, and press `<Alt-1>` or `<Alt-2>` or `<Alt-3>` or `<Alt-4>`, you can
-highlight selected text
+    By selecting text, and press `<Alt-1>` or `<Alt-2>` or `<Alt-3>` or `<Alt-4>`, you can
+    highlight selected text
 
 * Cancel highlight words
 
-Presss `<Leader>1` or `<Leader>2` or `<Leader>3` or `<Leader>4`
-
-You also can cancel highlight all by press `<Leader>0` or `<Atl-0>`
+    Presss `<Leader>1` or `<Leader>2` or `<Leader>3` or `<Leader>4`
+    You also can cancel highlight all by press `<Leader>0` or `<Atl-0>`
 
 * Replace highlight words
 
-When you use both highlight Label 1 and 2 for highlighting, you can then press
-`<Leader>sub` to replace Label 1 words as Label 2
+    When you use both highlight Label 1 and 2 for highlighting, you can then press
+    `<Leader>sub` to replace Label 1 words as Label 2
+
+Check `:help easyhl` for more details.
