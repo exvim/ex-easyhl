@@ -10,15 +10,14 @@ Contents                                            *easyhl* *easyhl-contents*
 
          1. Intro ........................... |easyhl-intro|
          2. Requirements .................... |easyhl-requirements|
-         3. Installation .................... |easyhl-installation|
-         4. Usage ........................... |easyhl-usage|
+         3. Usage ........................... |easyhl-usage|
               Commands ...................... |easyhl-commands|
               Key mappings .................. |easyhl-keys|
-         5. Configuration ................... |easyhl-configuration|
+         4. Configuration ................... |easyhl-configuration|
               Highlight colours ............. |easyhl-highlight|
-         6. Extending Easyhl ................ |easyhl-extend|
-         7. Troubleshooting & Known issues .. |easyhl-issues|
-         8. History ......................... |easyhl-history|
+         5. Extending Easyhl ................ |easyhl-extend|
+         6. Troubleshooting & Known issues .. |easyhl-issues|
+         7. History ......................... |easyhl-history|
 
 ==============================================================================
 1. Intro                                                        *easyhl-intro*
@@ -34,33 +33,7 @@ The following requirements have to be met in order to be able to use easyhl:
   - Vim 6.0 or higher. .
 
 ==============================================================================
-3. Installation                                          *easyhl-installation*
-
-This plugin follows the standard runtime path structure, and as such it can 
-be installed with a variety of plugin managers:
-
-Vundle~
->
-    Bundle 'exvim/ex_easyhl'
-<
-
-Pathogen~
->
-    git clone https://github.com/exvim/ex_easyhl ~/.vim/bundle/ex_easyhl
-<
-
-NeoBundle~
->
-    NeoBundle 'exvim/ex_easyhl'
-<
-
-Manual~
->
-    copy all of the files into your ~/.vim directory
-<
-
-==============================================================================
-4. Usage                                                        *easyhl-usage*
+3. Usage                                                        *easyhl-usage*
 
 Highlight words under cursor ~
 
@@ -134,7 +107,7 @@ All~
 
 
 ==============================================================================
-5. Configuration                                        *easyhl-configuration*
+4. Configuration                                        *easyhl-configuration*
 
                                                     *g:ex_easyhl_auto_cursorhl*
 g:ex_easyhl_auto_cursorhl~
@@ -179,15 +152,15 @@ your vimrc:
 See |:highlight| for more information.
 
 ==============================================================================
-6. Extending easyhl                                            *easyhl-extend*
+5. Extending easyhl                                            *easyhl-extend*
 
 
 ==============================================================================
-7. Troubleshooting & Known issues                              *easyhl-issues*
+6. Troubleshooting & Known issues                              *easyhl-issues*
 
 
 ==============================================================================
-8. History                                                    *easyhl-history*
+7. History                                                    *easyhl-history*
 
 1.0.0 (2014-03-19)
     - Initial release
