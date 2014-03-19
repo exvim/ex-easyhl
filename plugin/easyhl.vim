@@ -27,7 +27,7 @@ function! s:cursor_hl()
     let hl_word = expand('<cword>')
     let hl_pattern = '\<\C'.hl_word.'\>'
     if hl_pattern !=# w:ex_easyhl_cursorhl_text
-        let w:ex_easyhl_cursorhl_match_id = matchadd( 'ex_easyhl_cursorhl', hl_pattern, 0 )
+        let w:ex_easyhl_cursorhl_match_id = matchadd( 'EX_HL_cursorhl', hl_pattern, 0 )
         let w:ex_easyhl_cursorhl_text = hl_pattern
     endif
 endfunction
@@ -119,7 +119,7 @@ function! s:hl_text(match_nr, args)
         call s:hl_cancel(a:match_nr)
     else
         call s:hl_cancel(a:match_nr)
-        let w:ex_hl_match_ids[a:match_nr] = matchadd( 'ex_easyhl'.a:match_nr, pattern, a:match_nr )
+        let w:ex_hl_match_ids[a:match_nr] = matchadd( 'EX_HL_label'.a:match_nr, pattern, a:match_nr )
         let w:ex_hl_text[a:match_nr] = pattern
 
         let hl_pattern = a:args
@@ -189,11 +189,11 @@ endfunction
 " }}}1
 
 " syntax highlight {{{1 
-hi default ex_easyhl_cursorhl gui=none guibg=white term=none cterm=none ctermbg=white 
-hi default ex_easyhl1 gui=none guibg=lightcyan term=none cterm=none ctermbg=lightcyan
-hi default ex_easyhl2 gui=none guibg=lightmagenta term=none cterm=none ctermbg=lightmagenta
-hi default ex_easyhl3 gui=none guibg=lightred term=none cterm=none ctermbg=lightred
-hi default ex_easyhl4 gui=none guibg=lightgreen term=none cterm=none ctermbg=lightgreen
+hi default EX_HL_cursorhl gui=none guibg=white term=none cterm=none ctermbg=white 
+hi default EX_HL_label1 gui=none guibg=lightcyan term=none cterm=none ctermbg=lightcyan
+hi default EX_HL_label2 gui=none guibg=lightmagenta term=none cterm=none ctermbg=lightmagenta
+hi default EX_HL_label3 gui=none guibg=lightred term=none cterm=none ctermbg=lightred
+hi default EX_HL_label4 gui=none guibg=lightgreen term=none cterm=none ctermbg=lightgreen
 " }}}1
 
 " autocmd {{{1
