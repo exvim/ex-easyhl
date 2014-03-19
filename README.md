@@ -15,42 +15,16 @@ The following requirements have to be met in order to be able to use easyhl:
 
 This plugin follows the standard runtime path structure, and as such it can 
 be installed with a variety of plugin managers:
-
-Vundle:
-
-    ```vim
-    Bundle 'exvim/ex_easyhl'
-    ```
-
-Pathogen:
-
-    ```bash
-    git clone https://github.com/exvim/ex_easyhl ~/.vim/bundle/ex_easyhl
-    ```
-
-NeoBundle:
-
-    ```vim
-    NeoBundle 'exvim/ex_easyhl'
-    ```
-
-Manual:
-
-    ```
-    copy all of the files into your ~/.vim directory
-    ```
-
-## Installation
-
-To install using Pathogen.vim:
-
-    cd ~/.vim/bundle
-    git clone https://github.com/exvim/ex_easyhl
     
 To install using [Vundle](https://github.com/gmarik/vundle):
 
     # add this line to your .vimrc file
     Bundle 'exvim/ex_easyhl'
+
+To install using [Pathogen](https://github.com/tpope/vim-pathogen):
+
+    cd ~/.vim/bundle
+    git clone https://github.com/exvim/ex_easyhl
 
 To install using [NeoBundle](https://github.com/Shougo/neobundle.vim):
 
