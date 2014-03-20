@@ -68,6 +68,22 @@ COMMANDS                                                     *easyhl-commands*
 :[range]EasyhlRange {nr}                                        *:EasyhlRange*
     Highlight visual selected text.
 
+:HL1 [{pat}]                                                          *:HL1*
+    Highlight {pat} by label 1, if {pat} not given, cancel current highlight
+    of label 1
+
+:HL2 [{pat}]                                                          *:HL2*
+    Highlight {pat} by label 2, if {pat} not given, cancel current highlight
+    of label 2
+
+:HL3 [{pat}]                                                          *:HL3*
+    Highlight {pat} by label 3, if {pat} not given, cancel current highlight
+    of label 3
+
+:HL4 [{pat}]                                                          *:HL4*
+    Highlight {pat} by label 4, if {pat} not given, cancel current highlight
+    of label 4
+
 ------------------------------------------------------------------------------
 KEY MAPPINGS                                                     *easyhl-keys*
 

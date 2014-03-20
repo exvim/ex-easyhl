@@ -124,7 +124,9 @@ function! s:hl_text(match_nr, args)
 
         let hl_pattern = a:args
         if a:match_nr == 2 || a:match_nr == 4 " if 2,4, remove \<\C...\>
-            let hl_pattern = strpart( hl_pattern, 4, strlen(hl_pattern) - 6)
+            if match( hl_pattern, '^\\<\\C.*\\>$') != -1 
+                let hl_pattern = strpart( hl_pattern, 4, strlen(hl_pattern) - 6)
+            endif
         endif
         silent call setreg(s:hl_reg_map[a:match_nr],hl_pattern) 
     endif
@@ -207,11 +209,20 @@ endif
 command! -n=1 EasyhlWord call <SID>hl_cword('<args>')
 command! -n=1 EasyhlCancel call <SID>hl_cancel('<args>')
 command! -n=1 -range EasyhlRange <line1>,<line2>call <SID>hl_range('<args>')
+
+" TODO: -complete=customlist,exUtility#CompleteBySymbolFile
+command -narg=? HL1 call <SID>hl_text(1, '<args>')
+command -narg=? HL2 call <SID>hl_text(2, '<args>')
+command -narg=? HL3 call <SID>hl_text(3, '<args>')
+command -narg=? HL4 call <SID>hl_text(4, '<args>')
 " }}}1
 
 " default mappings {{{1
 if !exists("g:easyhl_no_mappings") || !g:easyhl_no_mappings
     if has("gui_running") " gui mode
+        " NOTE: though Vim help saids <A-> or <M-> represent as Alt key,
+        "       but it doesn't works in Mac. Instead, you need to type the 
+        "       character directly when writing the mappings with Alt key.
         if has ("mac")
             nnoremap <unique> <silent> ¡ :EasyhlWord 1<CR>
             nnoremap <unique> <silent> ™ :EasyhlWord 2<CR>
