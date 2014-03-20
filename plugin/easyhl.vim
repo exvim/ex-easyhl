@@ -70,7 +70,7 @@ function! s:reset_hl_vars(match_nr) " <<<
     silent call setreg(s:hl_reg_map[a:match_nr],'') 
 endfunction
 
-" s:check_match_nr
+" s:check_match_nr {{{2
 function! s:check_match_nr(match_nr)
     if a:match_nr != 1 && a:match_nr != 2 && a:match_nr != 3 && a:match_nr != 4 
         echohl ErrorMsg
@@ -85,10 +85,10 @@ endfunction
 " Desc: hightlight match_nr
 " NOTE: the 1,2,3,4 correspond to reg q,w,e,r
 
-function! s:hl_cword(match_nr) " <<<
+function! s:hl_cword(match_nr)
     " get word under cursor
     call s:hl_text( a:match_nr, '\<\C'.expand('<cword>').'\>' )
-endfunction " >>>
+endfunction
 
 " s:hl_text {{{2
 " Desc: hightlight match_nr with text
