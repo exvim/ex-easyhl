@@ -200,8 +200,11 @@ hi default EX_HL_label4 gui=none guibg=lightgreen term=none cterm=none ctermbg=l
 
 " autocmd {{{1
 if g:ex_easyhl_auto_cursorhl
-    au CursorHold * :call <SID>cursor_hl()
-    au CursorMoved * :call <SID>rm_cursor_hl()
+    augroup ex_easyhl
+        au!
+        au CursorHold * :call <SID>cursor_hl()
+        au CursorMoved * :call <SID>rm_cursor_hl()
+    augroup END
 endif
 " }}}1
 
