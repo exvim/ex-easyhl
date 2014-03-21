@@ -214,10 +214,10 @@ command! -n=1 EasyhlCancel call <SID>hl_cancel('<args>')
 command! -n=1 -range EasyhlRange <line1>,<line2>call <SID>hl_range('<args>')
 
 " TODO: -complete=customlist,exUtility#CompleteBySymbolFile
-command -narg=? HL1 call <SID>hl_text(1, '<args>')
-command -narg=? HL2 call <SID>hl_text(2, '<args>')
-command -narg=? HL3 call <SID>hl_text(3, '<args>')
-command -narg=? HL4 call <SID>hl_text(4, '<args>')
+command! -narg=? HL1 call <SID>hl_text(1, '<args>')
+command! -narg=? HL2 call <SID>hl_text(2, '<args>')
+command! -narg=? HL3 call <SID>hl_text(3, '<args>')
+command! -narg=? HL4 call <SID>hl_text(4, '<args>')
 " }}}1
 
 " default mappings {{{1
