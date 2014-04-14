@@ -12,7 +12,7 @@ Contents                                            *easyhl* *easyhl-contents*
          2. Requirements .................... |easyhl-requirements|
          3. Usage ........................... |easyhl-usage|
               Commands ...................... |easyhl-commands|
-              Key mappings .................. |easyhl-keys|
+              Key mappings .................. |easyhl-mappings|
          4. Configuration ................... |easyhl-configuration|
               Highlight colours ............. |easyhl-highlighting|
          5. Extending Easyhl ................ |easyhl-extend|
