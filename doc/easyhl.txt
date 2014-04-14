@@ -2,8 +2,8 @@
 
 Author:         Johnny Wu <karasaya@gmail.com>
 Licence:        MIT licence
-Homepage:       http://ex-dev.com/exvim/
-Version:        1.0.0
+Homepage:       http://exvim.github.io/
+Version:        0.1.0
 
 ==============================================================================
 Contents                                            *easyhl* *easyhl-contents*
