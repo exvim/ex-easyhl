@@ -85,7 +85,7 @@ COMMANDS                                                     *easyhl-commands*
     of label 4
 
 ------------------------------------------------------------------------------
-KEY MAPPINGS                                                     *easyhl-keys*
+KEY MAPPINGS                                                   *easyhl-mappings*
 
 Default key mappings:
 
