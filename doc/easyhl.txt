@@ -30,7 +30,7 @@ Easyhl is a plugin for temporary highlight words under cursor.
 
 The following requirements have to be met in order to be able to use easyhl:
 
-  - Vim 6.0 or higher. .
+  - Vim 6.0 or higher.
 
 ==============================================================================
 3. Usage                                                        *easyhl-usage*
@@ -87,38 +87,46 @@ COMMANDS                                                     *easyhl-commands*
 ------------------------------------------------------------------------------
 KEY MAPPINGS                                                     *easyhl-keys*
 
-The following mappings are valid in the Tagbar window:
+Default key mappings:
 
-All~
-
-  <Atl-1>        
+                                                                *'easyhl-<a-1>'*
+<Atl-1>        
     Highlight current words on label 1, toggle highlight when same word meets
 
-  <Atl-2>
+                                                                *'easyhl-<a-2>'*
+<Atl-2>
     Highlight current words on label 2, toggle highlight when same word meets 
 
-  <Atl-3>
+                                                                *'easyhl-<a-3>'*
+<Atl-3>
     Highlight current words on label 3, toggle highlight when same word meets 
 
-  <Atl-4>
+                                                                *'easyhl-<a-4>'*
+<Atl-4>
     Highlight current words on label 4, toggle highlight when same word meets 
 
-  <Atl-0>
+                                                                *'easyhl-<a-0>'*
+<Atl-0>
     Cancel highlight all labels
 
-  <Leader>1
+                                                            *'easyhl-<leader>1'*
+<Leader>1
     Cancel highlight label 1
 
-  <Leader>2
+                                                            *'easyhl-<leader>2'*
+<Leader>2
     Cancel highlight label 2
 
-  <Leader>3
+                                                            *'easyhl-<leader>3'*
+<Leader>3
     Cancel highlight label 3
 
-  <Leader>4
+                                                            *'easyhl-<leader>4'*
+<Leader>4
     Cancel highlight label 4
 
-  <Leader>sub
+                                                          *'easyhl-<leader>sub'*
+<Leader>sub
     Replace label 1 highlight words with label 2 highlight words
 
 
