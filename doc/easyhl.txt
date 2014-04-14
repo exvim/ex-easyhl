@@ -14,7 +14,7 @@ Contents                                            *easyhl* *easyhl-contents*
               Commands ...................... |easyhl-commands|
               Key mappings .................. |easyhl-keys|
          4. Configuration ................... |easyhl-configuration|
-              Highlight colours ............. |easyhl-highlight|
+              Highlight colours ............. |easyhl-highlighting|
          5. Extending Easyhl ................ |easyhl-extend|
          6. Troubleshooting & Known issues .. |easyhl-issues|
          7. History ......................... |easyhl-history|
