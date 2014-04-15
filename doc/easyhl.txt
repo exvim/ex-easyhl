@@ -142,7 +142,7 @@ cursor highlight, when cursor stay for several seconds, the word under cursor
 will be highlighted.
 
 ------------------------------------------------------------------------------
-HIGHLIGHT COLOURS                                           *easyhl-highlight*
+HIGHLIGHT COLOURS                                           *easyhl-highlighting*
 
 All of the colours used by easyhl can be customized. Here is a list of the
 highlight groups that are defined by Tagbar:
