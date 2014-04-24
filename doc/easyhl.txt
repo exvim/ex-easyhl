@@ -42,8 +42,8 @@ or <Alt-3> or <Alt-4>
 
 Highlith visual selection~
 
-By selecting text, and press <Alt-1> or <Alt-2> or <Alt-3> or <Alt-4>, you can
-highlight selected text
+By selecting text, and press <Alt-1> or <Alt-2> or <Alt-3> or <Alt-4>, you 
+can highlight selected text
 
 Cancel highlight words~
 
@@ -53,8 +53,8 @@ You also can cancel highlight all by press <Leader>0 or <Atl-0>
 
 Replace highlight words~
 
-When you use both highlight Label 1 and 2 for highlighting, you can then press
-<Leader>sub to replace Label 1 words as Label 2
+When you use both highlight Label 1 and 2 for highlighting, you can then 
+press <Leader>sub to replace Label 1 words as Label 2
 
 ------------------------------------------------------------------------------
 COMMANDS                                                     *easyhl-commands*
@@ -62,70 +62,74 @@ COMMANDS                                                     *easyhl-commands*
 :EasyhlWord {nr}                                                 *:EasyhlWord*
     Highlight words under cursor by label {nr}.
 
-:EasyhlCancel {nr}                                              *:EasyhlCancel*
+:EasyhlCancel {nr}                                             *:EasyhlCancel*
     Cancel highlight label {nr}.
 
 :[range]EasyhlRange {nr}                                        *:EasyhlRange*
     Highlight visual selected text.
 
-:HL1 [{pat}]                                                          *:HL1*
+:HL1 [{pat}]                                                            *:HL1*
     Highlight {pat} by label 1, if {pat} not given, cancel current highlight
     of label 1
 
-:HL2 [{pat}]                                                          *:HL2*
+:HL2 [{pat}]                                                            *:HL2*
     Highlight {pat} by label 2, if {pat} not given, cancel current highlight
     of label 2
 
-:HL3 [{pat}]                                                          *:HL3*
+:HL3 [{pat}]                                                            *:HL3*
     Highlight {pat} by label 3, if {pat} not given, cancel current highlight
     of label 3
 
-:HL4 [{pat}]                                                          *:HL4*
+:HL4 [{pat}]                                                            *:HL4*
     Highlight {pat} by label 4, if {pat} not given, cancel current highlight
     of label 4
 
 ------------------------------------------------------------------------------
-KEY MAPPINGS                                                   *easyhl-mappings*
+KEY MAPPINGS                                                 *easyhl-mappings*
 
 Default key mappings:
 
-                                                                *'easyhl-<a-1>'*
+                                                              *'easyhl-<a-1>'*
 <Atl-1>        
-    Highlight current words on label 1, toggle highlight when same word meets
+    Highlight current words on label 1, toggle highlight when same word 
+    meets
 
-                                                                *'easyhl-<a-2>'*
+                                                              *'easyhl-<a-2>'*
 <Atl-2>
-    Highlight current words on label 2, toggle highlight when same word meets 
+    Highlight current words on label 2, toggle highlight when same word 
+    meets 
 
-                                                                *'easyhl-<a-3>'*
+                                                              *'easyhl-<a-3>'*
 <Atl-3>
-    Highlight current words on label 3, toggle highlight when same word meets 
+    Highlight current words on label 3, toggle highlight when same word 
+    meets 
 
-                                                                *'easyhl-<a-4>'*
+                                                              *'easyhl-<a-4>'*
 <Atl-4>
-    Highlight current words on label 4, toggle highlight when same word meets 
+    Highlight current words on label 4, toggle highlight when same word 
+    meets 
 
-                                                                *'easyhl-<a-0>'*
+                                                              *'easyhl-<a-0>'*
 <Atl-0>
     Cancel highlight all labels
 
-                                                            *'easyhl-<leader>1'*
+                                                          *'easyhl-<leader>1'*
 <Leader>1
     Cancel highlight label 1
 
-                                                            *'easyhl-<leader>2'*
+                                                          *'easyhl-<leader>2'*
 <Leader>2
     Cancel highlight label 2
 
-                                                            *'easyhl-<leader>3'*
+                                                          *'easyhl-<leader>3'*
 <Leader>3
     Cancel highlight label 3
 
-                                                            *'easyhl-<leader>4'*
+                                                          *'easyhl-<leader>4'*
 <Leader>4
     Cancel highlight label 4
 
-                                                          *'easyhl-<leader>sub'*
+                                                        *'easyhl-<leader>sub'*
 <Leader>sub
     Replace label 1 highlight words with label 2 highlight words
 
@@ -133,25 +137,27 @@ Default key mappings:
 ==============================================================================
 4. Configuration                                        *easyhl-configuration*
 
-                                                    *g:ex_easyhl_auto_cursorhl*
+                                                   *g:ex_easyhl_auto_cursorhl*
 g:ex_easyhl_auto_cursorhl~
 Default: 0
 
 By default the cursor higlight is turn off.  use this option to turn on 
-cursor highlight, when cursor stay for several seconds, the word under cursor
-will be highlighted.
+cursor highlight, when cursor stay for several seconds, the word under 
+cursor will be highlighted.
 
 ------------------------------------------------------------------------------
-HIGHLIGHT COLOURS                                           *easyhl-highlighting*
+HIGHLIGHT COLOURS                                        *easyhl-highlighting*
 
 All of the colours used by easyhl can be customized. Here is a list of the
 highlight groups that are defined by Tagbar:
 
+>
     hi default ex_easyhl_cursorhl gui=none guibg=White term=none cterm=none ctermbg=white 
     hi default ex_easyhl1 gui=none guibg=LightCyan term=none cterm=none ctermbg=lightcyan
     hi default ex_easyhl2 gui=none guibg=LightMagenta term=none cterm=none ctermbg=lightmagenta
     hi default ex_easyhl3 gui=none guibg=LightRed term=none cterm=none ctermbg=lightred
     hi default ex_easyhl4 gui=none guibg=LightGreen term=none cterm=none ctermbg=lightgreen
+<
 
 ex_easyhl_cursorhl~
     Cursor highlight
