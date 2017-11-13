@@ -190,12 +190,14 @@ endfunction
 
 " }}}1
 
-" syntax highlight {{{1 
-hi default EX_HL_cursorhl gui=none guibg=white term=none cterm=none ctermbg=white 
-hi default EX_HL_label1 gui=none guibg=lightcyan term=none cterm=none ctermbg=lightcyan
-hi default EX_HL_label2 gui=none guibg=lightmagenta term=none cterm=none ctermbg=lightmagenta
-hi default EX_HL_label3 gui=none guibg=lightred term=none cterm=none ctermbg=lightred
-hi default EX_HL_label4 gui=none guibg=lightgreen term=none cterm=none ctermbg=lightgreen
+" syntax highlight {{{1
+function! s:syntax_init_hl() abort
+    hi default EX_HL_cursorhl gui=none guibg=white term=none cterm=none ctermbg=white 
+    hi default EX_HL_label1 gui=none guibg=lightcyan term=none cterm=none ctermbg=lightcyan
+    hi default EX_HL_label2 gui=none guibg=lightmagenta term=none cterm=none ctermbg=lightmagenta
+    hi default EX_HL_label3 gui=none guibg=lightred term=none cterm=none ctermbg=lightred
+    hi default EX_HL_label4 gui=none guibg=lightgreen term=none cterm=none ctermbg=lightgreen
+endfunction
 " }}}1
 
 " autocmd {{{1
@@ -206,6 +208,12 @@ if g:ex_easyhl_auto_cursorhl
         au CursorMoved * :call <SID>rm_cursor_hl()
     augroup END
 endif
+
+call s:syntax_init_hl()
+augroup ex_easyhl
+    autocmd!
+    au ColorScheme * :call <SID>syntax_init_hl()
+augroup END
 " }}}1
 
 " commands {{{1
