@@ -229,7 +229,25 @@ command! -narg=? HL4 call <SID>hl_text(4, '<args>')
 
 " default mappings {{{1
 if !exists("g:easyhl_no_mappings") || !g:easyhl_no_mappings
-    if has("gui_running") " gui mode
+
+    let s:iswindows = 0
+    if(has("win32") || has("win64") || has("win95") || has("win16"))
+        let s:iswindows = 1
+    endif
+
+    if has("nvim") && s:iswindows
+        nnoremap <unique> <silent> <M-1> :EasyhlWord 1<CR>
+        nnoremap <unique> <silent> <M-2> :EasyhlWord 2<CR>
+        nnoremap <unique> <silent> <M-3> :EasyhlWord 3<CR>
+        nnoremap <unique> <silent> <M-4> :EasyhlWord 4<CR>
+
+        vnoremap <unique> <silent> <M-1> :EasyhlRange 1<CR>
+        vnoremap <unique> <silent> <M-2> :EasyhlRange 2<CR>
+        vnoremap <unique> <silent> <M-3> :EasyhlRange 3<CR>
+        vnoremap <unique> <silent> <M-4> :EasyhlRange 4<CR>
+
+        nnoremap <unique> <silent> <M-0> :EasyhlCancel 0<CR>
+    elseif has("gui_running") " gui mode
         " NOTE: though Vim help saids <A-> or <M-> represent as Alt key,
         "       but it doesn't works in Mac. Instead, you need to type the 
         "       character directly when writing the mappings with Alt key.
